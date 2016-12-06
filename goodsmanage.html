@@ -1,0 +1,45 @@
+<html>
+<head>
+<script  src="jquery-3.1.1.js"></script>
+<script type="text/javascript" src="goodsmanage.js"></script>
+<link rel="stylesheet" type="text/css" href="goodsmanage.css">
+</head>
+<body>
+	店铺名称：<input type="text" name="shopname" value="请输入店铺名称" />
+	商品名称：<input type="text" name="goodsname" value="请输入商品名称" />
+	<input type="button" id="search" value="搜索" />
+	<br/><br/>
+	<table  >
+		<tr>
+			<td><input type="button" id="addgoods" value="添加商品" /></td>
+		</tr>
+		<tr>
+			<table class="imagetable">
+				<tr>
+					<th>No.</th>
+					<th>店铺名称</th>
+					<th>商品名称</th>
+					<th>操作</th>
+				</tr><tr>
+					<td>1</td>
+					<td>三只松鼠</td>
+					<td>碧根果</td>
+					<td>修改</td>
+				</tr><tr>
+					<td>2</td>
+					<td>小楠体育</td>
+					<td>82年解放鞋</td>
+					<td>修改</td>
+				</tr><tr>
+					<td>……</td>
+					<td>……</td>
+					<td>……</td>
+					<td>……</td>
+				</tr>
+			</table>
+		</tr>
+	</table>
+	<div id="dialog_show">店铺名称：<input type="text" name="shopname" value="请输入店铺名称" />
+	商品名称：<input type="text" name="goodsname" value="请输入商品名称" /></div>
+</body>
+</html>
