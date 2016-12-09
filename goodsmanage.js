@@ -1,5 +1,5 @@
 jQuery(document).ready(function() {
-		
+
 	$("#addgoods").click(function() {
 		$("div#add").show();
 	})
@@ -7,14 +7,15 @@ jQuery(document).ready(function() {
 		$("div#add").hide();
 	})
 	$("#addGoods").click(function() {
-		$("div#add").hide();
-		var shopName = $("#shopName").val();
-		var goodsName = $("#goodsName").val();
-		var noVal = $("#last").prev().children().first().text();
-		var no = parseInt(noVal) + 1;
-		var addInfor = "<tr><td>" + no + "</td><td>" + shopName + "</td><td>" + goodsName + "</td><td>" + "修改" + "</td></tr>";
-		$("#last").before(addInfor);
-	})
+			$("div#add").hide();
+			var shopName = $("#shopName").val();
+			var goodsName = $("#goodsName").val();
+			var noVal = $("#last").prev().children().first().text();
+			var no = parseInt(noVal) + 1;
+			var addInfor = "<tr><td>" + no + "</td><td>" + shopName + "</td><td>" + goodsName + "</td><td>" + "修改" + "</td></tr>";
+			$("#last").before(addInfor);
+		})
+		//选tr而非td
 	$("#search").click(function() {
 		var shopNameSear = $("#shopNameSearch").val();
 		var goodsNameSear = $("#goodsNameSearch").val();
@@ -29,13 +30,27 @@ jQuery(document).ready(function() {
 		}
 
 	})
-$(".imagetable tr").each(function() {
+	$(".imagetable tr").each(function() {
+		
 		$(this).find("td").eq(3).click(function() {
-			$("div#change").show();
+			$("div#change").show(); obj=this;
+			$("#shopName1").val($(obj).prev().text());
+			 $("#goodsName1").val($(obj).prev().prev().text());
 		})
 
 	})
-$("#cancelIt").click(function() {
+	$("#cancelIt").click(function() {
 		$("div#change").hide();
 	})
+	//改变表格内值
+	$("#changeIt").click(function() {
+		$("div#change").hide();
+		var shopName1 = $("#shopName1").val();
+			var goodsName1 = $("#goodsName1").val();
+			$(obj).prev().text(shopName1);
+			$(obj).prev().prev().text(goodsName1);
+
+
+	})
+	var obj;
 })
