@@ -1,13 +1,13 @@
 jQuery(document).ready(function() {
 		
 	$("#addgoods").click(function() {
-		$("div").show();
+		$("div#add").show();
 	})
 	$("#cancel").click(function() {
-		$("div").hide();
+		$("div#add").hide();
 	})
 	$("#addGoods").click(function() {
-		$("div").hide();
+		$("div#add").hide();
 		var shopName = $("#shopName").val();
 		var goodsName = $("#goodsName").val();
 		var noVal = $("#last").prev().children().first().text();
@@ -31,8 +31,11 @@ jQuery(document).ready(function() {
 	})
 $(".imagetable tr").each(function() {
 		$(this).find("td").eq(3).click(function() {
-			console.log("hello");
+			$("div#change").show();
 		})
 
+	})
+$("#cancelIt").click(function() {
+		$("div#change").hide();
 	})
 })
