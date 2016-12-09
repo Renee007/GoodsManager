@@ -17,38 +17,39 @@ jQuery(document).ready(function() {
 		})
 		//选tr而非td
 	$("#search").click(function() {
-		var shopNameSear = $("#shopNameSearch").val();
-		var goodsNameSear = $("#goodsNameSearch").val();
-		var i = 0;
-		if (i == 0) {
-			$("tr").slice(3).hide();
-			i++;
-		}
-		if (i == 1) {
-			$("tr:contains('" + shopNameSear + "')").show();
-			i--;
-		}
+			var shopNameSear = $("#shopNameSearch").val();
+			var goodsNameSear = $("#goodsNameSearch").val();
+			var i = 0;
+			if (i == 0) {
+				$("tr").slice(3).hide();
+				i++;
+			}
+			if (i == 1) {
+				$("tr:contains('" + shopNameSear + "')").show();
+				i--;
+			}
 
-	})
+		})
+		//新添加的条目取不到
 	$(".imagetable tr").each(function() {
 		
 		$(this).find("td").eq(3).click(function() {
 			$("div#change").show(); obj=this;
-			$("#shopName1").val($(obj).prev().text());
-			 $("#goodsName1").val($(obj).prev().prev().text());
+			$("#shopName1").val($(obj).prev().prev().text());
+			 $("#goodsName1").val($(obj).prev().text());
 		})
 
 	})
 	$("#cancelIt").click(function() {
 		$("div#change").hide();
 	})
-	//改变表格内值
+
 	$("#changeIt").click(function() {
 		$("div#change").hide();
 		var shopName1 = $("#shopName1").val();
-			var goodsName1 = $("#goodsName1").val();
-			$(obj).prev().text(shopName1);
-			$(obj).prev().prev().text(goodsName1);
+		var goodsName1 = $("#goodsName1").val();
+		$(obj).prev().text(goodsName1);
+		$(obj).prev().prev().text(shopName1);
 
 
 	})
