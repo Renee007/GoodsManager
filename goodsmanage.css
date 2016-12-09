@@ -21,3 +21,16 @@ table.imagetable td {
 	border-style: solid;
 	border-color: #999999;
 }
+.alert{
+	position: fixed;
+	height: 200px;
+	width: 400px;
+	background :#F5F5F5;
+	display: none;
+	border-width: 1px;
+	padding: 28px;
+	border-style: solid;
+	border-color: #999999;
+	top:50%;
+	left:50%;
+}

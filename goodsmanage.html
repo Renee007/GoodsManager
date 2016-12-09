@@ -5,8 +5,8 @@
 <link rel="stylesheet" type="text/css" href="goodsmanage.css">
 </head>
 <body>
-	店铺名称：<input type="text" name="shopname" value="请输入店铺名称" />
-	商品名称：<input type="text" name="goodsname" value="请输入商品名称" />
+	店铺名称：<input type="text" id="shopNameSearch" placeholder="请输入店铺名称" />
+	商品名称：<input type="text" id="goodNameSearch" placeholder="请输入商品名称" />
 	<input type="button" id="search" value="搜索" />
 	<br/><br/>
 	<table  >
@@ -30,7 +30,7 @@
 					<td>小楠体育</td>
 					<td>82年解放鞋</td>
 					<td>修改</td>
-				</tr><tr>
+				</tr><tr id="last">
 					<td>……</td>
 					<td>……</td>
 					<td>……</td>
@@ -39,7 +39,12 @@
 			</table>
 		</tr>
 	</table>
-	<div id="dialog_show">店铺名称：<input type="text" name="shopname" value="请输入店铺名称" />
-	商品名称：<input type="text" name="goodsname" value="请输入商品名称" /></div>
+	<div>
+	店铺名称：<input type="text" id="shopName" placeholder="请输入店铺名称" /><br/>
+	商品名称：<input type="text" id="goodsName" placeholder="请输入商品名称" /><br/>
+	<input type="button" id="addGoods" value="确定" />
+	<input type="button" id="cancel" value="取消" />
+
+	</div>
 </body>
 </html>
