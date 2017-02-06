@@ -1,0 +1,83 @@
+html, body{
+	width: 100%;
+}
+*{
+	margin: 0;
+	padding: 0;
+}
+li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+/*  清除浮动（支持包括IE6在内的所有现代浏览器） */
+.clearfix{
+	overflow: auto;
+  	zoom: 1;
+}
+
+.text-center{
+	text-align: center;
+}
+
+table{
+	border: 1px solid #ddd;
+	width: 100%;
+}
+tr{
+	text-align: center;
+	border-bottom: 1px solid #000 !important;
+}
+table thead tr, table tbody tr{
+	height: 40px;
+	padding: 5px 0;
+}
+
+.pull-left{
+	float: left;
+}
+.pull-right{
+	float: right;
+}
+
+.form-wrap{
+	padding: 5px 0;
+}
+input.form-control{
+	padding: 2px 5px;
+}
+
+.btn{
+	cursor: pointer;
+	padding: 5px 10px;
+	text-align: center;
+	color: #fff;
+	border:none;
+	border-radius: 3px;
+	background-color: #0767c8;
+}
+
+.wrapper{
+	width: 100%;
+}
+.topbar{
+	width: 100%;
+	height: 54px;
+	background-color: #0767c8;
+}
+.main{
+	max-width: 960px;
+	margin: auto;	
+}
+.main .filter-wrap{
+	padding: 20px 15px;
+	margin: 15px auto; 
+	background-color: #eee;
+}
+.main .table-wrap{
+
+}
+.footer{
+
+}
